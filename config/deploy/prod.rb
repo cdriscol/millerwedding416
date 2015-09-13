@@ -41,33 +41,21 @@ set :user, 'chris'
 # set it globally
   set :ssh_options, {
     user: 'chris',
-    keys: %w(~/.ssh/id_rsa),
+    keys: %w(~/.ssh/millerwedding416),
     forward_agent: true,
     auth_methods: %w(publickey password)
   }
 
 namespace :deploy do
-  # forever stop server.js
-  desc "forever stop server.js"
-  task :stop_forever do
-    on roles(:app) do
-      begin
-        #puts "executing: forever stop server.js"
-        #execute "cd #{deploy_to}/current && forever stop server.js"
-      rescue
-        #do nothing!  Had to do this because :on_error => :continue didn't work
-      end
-    end
-  end
-
   # precompile assets
   task :precompile_assets do
     on roles(:app) do
-      execute "cd #{release_path}; NODE_ENV=production bower install"
+      puts 'installing bower assets'
+      execute "cd #{release_path}; bower install"
+      
+      puts 'installing npm assets'
       execute "cd #{release_path}; npm cache clean"
-      execute "cd #{release_path}; NODE_ENV=production npm install"
-      execute "cd #{release_path}; NODE_ENV=production npm install email-templates"
-      execute "cd #{release_path}; NODE_ENV=development grunt build"
+      execute "cd #{release_path}; npm install"
     end
   end
 
@@ -77,37 +65,24 @@ namespace :deploy do
     # restart the server
   task :restart do
     on roles(:app) do
-      puts 'RESTARTING NGINX'
-      execute "sudo service nginx stop"
-      execute "sudo service nginx start"
+      puts 'restarting NGINX'
+      execute "sudo service nginx restart"
     end
   end
 
 
   task :start_app do
     on roles(:app) do
-      puts "executing: forever stopalll"
-      execute "cd #{deploy_to}/current && forever stopall"
+      puts "executing: pm2 stop server"
+      execute "cd #{deploy_to}/current && pm2 stop millerwedding416"
 
-      puts "executing: starter.sh"
-      execute "cd #{deploy_to} && ./starter.sh"
+      puts "executing: pm2 start server"
+      execute "cd #{deploy_to}/current && pm2 start server.js --name \"millerwedding416\""
     end
   end
-
-  def execute_interactively(command)
-      user = fetch(:user)
-      port = fetch(:port) || 22
-      exec "ssh -l #{user} #{host} -p #{port} -t 'source /etc/profile; cd #{deploy_to}/current && #{command}'"
-    end
-
-    def withsource(command)
-       "source /etc/profile; #{command}"
-    end
 end
 
-#before "deploy:update", "deploy:chown_app_dir"
 after "deploy:updated", "deploy:precompile_assets"
-after "deploy:published" , "deploy:stop_forever"
-after "deploy:stop_forever", "deploy:start_app"
+after "deploy:published" , "deploy:start_app"
 after "deploy:start_app", "deploy:restart"
 after "deploy:restart", "deploy:cleanup" # leave the last 5 releases only
