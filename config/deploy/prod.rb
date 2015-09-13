@@ -56,8 +56,8 @@ namespace :deploy do
       puts 'installing npm assets'
       # execute "cd #{release_path}; npm cache clean"
       execute "cd #{release_path}; npm cache clean"
-      execute "cd #{release_path}; NODE_ENV=production npm install"
-      execute "cd #{release_path}; NODE_ENV=production gulp build"
+      execute "cd #{release_path}; npm install --dev"
+      execute "cd #{release_path}; gulp build"
     end
   end
 
