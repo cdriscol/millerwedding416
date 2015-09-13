@@ -12,7 +12,7 @@ set :ssh_options, {
 
 # user info
 set :user, 'chris'
-set :use_sudo, false
+# set :use_sudo, false
 
 # subversion repo username and password
 set :scm, :git

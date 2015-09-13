@@ -23,9 +23,9 @@ set :scm_command, 'git'
 set :deploy_via, :remote_cache	# only updates changed files
 
 # fixes the "sorry, you must have a tty to run sudo" issue
-#default_run_options[:pty] = true
+set :pty, true
 
-set :use_sudo, false
+# set :use_sudo, false
 
 # Extended Server Syntax
 # ======================
