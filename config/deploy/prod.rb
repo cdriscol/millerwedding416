@@ -55,8 +55,7 @@ namespace :deploy do
       
       puts 'installing npm assets'
       # execute "cd #{release_path}; npm cache clean"
-      execute "cd #{release_path}; npm cache clean"
-      execute "cd #{release_path}; npm install --dev"
+      execute "cd #{release_path}; npm install"
       execute "cd #{release_path}; gulp build"
     end
   end
@@ -76,9 +75,7 @@ namespace :deploy do
   task :start_app do
     on roles(:app) do
       puts "executing: pm2 stop server"
-      execute "cd #{deploy_to}/current && pm2 stop millerwedding416"
-      
-      execute "cd #{deploy_to}/current && pm2 delete millerwedding416"
+      execute "cd #{deploy_to}/current && pm2 stop millerwedding416 -s"
 
       puts "executing: pm2 start server"
       execute "cd #{deploy_to}/current && pm2 start server.js --name \"millerwedding416\""
