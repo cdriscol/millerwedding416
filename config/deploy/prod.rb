@@ -75,6 +75,8 @@ namespace :deploy do
     on roles(:app) do
       puts "executing: pm2 stop server"
       execute "cd #{deploy_to}/current && pm2 stop millerwedding416"
+      
+      execute "cd #{deploy_to}/current && pm2 delete millerwedding416"
 
       puts "executing: pm2 start server"
       execute "cd #{deploy_to}/current && pm2 start server.js --name \"millerwedding416\""
