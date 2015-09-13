@@ -23,7 +23,7 @@ set :scm_command, 'git'
 set :deploy_via, :remote_cache	# only updates changed files
 
 # fixes the "sorry, you must have a tty to run sudo" issue
-set :pty, true
+# set :pty, true
 
 # set :use_sudo, false
 
@@ -50,12 +50,14 @@ namespace :deploy do
   # precompile assets
   task :precompile_assets do
     on roles(:app) do
-      puts 'installing bower assets'
-      execute "cd #{release_path}; bower install"
+      # puts 'installing bower assets'
+      # execute "cd #{release_path}; bower install"
       
       puts 'installing npm assets'
+      # execute "cd #{release_path}; npm cache clean"
       execute "cd #{release_path}; npm cache clean"
-      execute "cd #{release_path}; npm install"
+      execute "cd #{release_path}; NODE_ENV=production npm install"
+      execute "cd #{release_path}; NODE_ENV=production gulp build"
     end
   end
 
@@ -66,7 +68,7 @@ namespace :deploy do
   task :restart do
     on roles(:app) do
       puts 'restarting NGINX'
-      execute "sudo service nginx restart"
+      execute :sudo, "service nginx restart"
     end
   end
 
