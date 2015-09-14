@@ -47,15 +47,14 @@ http://driscolsoftware.com
   <link href="{{url}}{{favicon}}" rel="shortcut icon" type="image/x-icon">
 
   <!-- Application CSS Files -->
+  <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
   {% for cssFile in cssFiles %}<link rel="stylesheet" href="{{cssFile}}">{% endfor %}
 </head>
 
 <body class="ng-cloak">
   <!-- <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header> -->
   <section class="content">
-    <section class="container">
       {% block content %}{% endblock %}
-    </section>
   </section>
 
   <!--Embedding The User Object-->

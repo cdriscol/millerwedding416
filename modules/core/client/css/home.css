@@ -1,0 +1,10 @@
+.home {
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("/modules/core/client/img/natemichelle.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #EBEBEB;
+  text-align: center; }
+  .home .dancing {
+    font-family: 'Dancing Script', cursive; }

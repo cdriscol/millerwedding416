@@ -14,7 +14,7 @@ module.exports = {
         'public/lib/angular-messages/angular-messages.min.js',
         'public/lib/angular-ui-router/release/angular-ui-router.min.js',
         'public/lib/angular-ui-utils/ui-utils.min.js',
-        'public/lib/angular-material/angular-material.js'
+        'public/lib/angular-material/angular-material.min.js'
       ]
     },
     css: 'public/dist/application.min.css',
