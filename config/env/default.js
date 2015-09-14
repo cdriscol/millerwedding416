@@ -28,5 +28,15 @@ module.exports = {
   sessionKey: 'sessionId',
   sessionCollection: 'sessions',
   logo: 'modules/core/client/img/brand/logo.png',
-  favicon: 'modules/core/client/img/brand/favicon.ico'
+  favicon: 'modules/core/client/img/brand/favicon.ico',
+  google_drive: {
+    creds: {
+      client_email: process.env.MW_GMAIL,
+      private_key: process.env.MW_GMAIL_KEY
+    },
+    subscribe_id: process.env.MW_GMAIL_SUBSCRIBE
+  },
+  mandrill: {
+    api_key: process.env.MW_MANDRILL_KEY
+  }
 };
