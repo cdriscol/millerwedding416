@@ -1,0 +1,81 @@
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
+mw-subscribe {
+  min-height:80px;
+  .show-hide {
+      -webkit-transition:all linear 1.5s  !important;
+      transition:all linear 1.5s !important;
+  }
+  .show-hide.ng-hide {
+      opacity: 0;
+  }
+  .show-hide.ng-show {
+      opacity: 1;
+  }
+  md-input-container {
+    display:inline-block;
+    md-icon {
+      color:white;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .md-input {
+      border-color: white;
+      border-color: rgba(255, 255, 255, 0.5);
+      color:white;
+      text-align: center;
+    }
+    
+    label {
+      color:white;
+      text-align: center;
+    }
+    
+    &:not(.md-input-invalid) {
+      &.md-input-has-value {
+        label {
+          color:white;
+        }
+      }
+      &.md-input-focused {
+        label {
+          color:rgb(255,255,255);
+        }
+        .md-input {
+          border-color:white;
+          border-color: rgba(255, 255, 255, 0.8);
+        }
+        md-icon {
+          color:white;
+        }
+      }
+    }
+    
+    &.md-input-invalid {
+     .md-input {
+       border-color: red;
+       border-color: rgba(255, 0, 0, 0.5);
+     }
+     &.md-input-focused label {
+       color: white;
+     }
+   }
+  }
+  .md-button {
+    display:inline-block;
+    &.md-primary.md-fab:not([disabled]) {
+      background-color:gray;
+      &:hover {
+        background-color:rgb(150,150,150);
+      }
+    }
+    &.md-fab[disabled] {
+      background-color:gray;
+      background-color:rgba(100,100,100,0.5);
+    }
+  }
+}

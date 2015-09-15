@@ -16,7 +16,7 @@ exports.addSubscription = function(req, res) {
     sheet.useServiceAccountAuth(config.google_drive.creds, function(err1) {
       sheet.getRows(1, function(err, rows) {
         var alreadyExists = _.any(rows, function(row) {
-          return row.email == email;
+          return row.email === email;
         });
         if(alreadyExists) {
           res.send('already subscribed');

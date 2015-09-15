@@ -1,0 +1,45 @@
+mw-subscribe {
+  min-height: 80px; }
+  mw-subscribe .show-hide {
+    -webkit-transition: all linear 1.5s !important;
+    transition: all linear 1.5s !important; }
+  mw-subscribe .show-hide.ng-hide {
+    opacity: 0; }
+  mw-subscribe .show-hide.ng-show {
+    opacity: 1; }
+  mw-subscribe md-input-container {
+    display: inline-block; }
+    mw-subscribe md-input-container md-icon {
+      color: white;
+      color: rgba(255, 255, 255, 0.5); }
+    mw-subscribe md-input-container .md-input {
+      border-color: white;
+      border-color: rgba(255, 255, 255, 0.5);
+      color: white;
+      text-align: center; }
+    mw-subscribe md-input-container label {
+      color: white;
+      text-align: center; }
+    mw-subscribe md-input-container:not(.md-input-invalid).md-input-has-value label {
+      color: white; }
+    mw-subscribe md-input-container:not(.md-input-invalid).md-input-focused label {
+      color: white; }
+    mw-subscribe md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+      border-color: white;
+      border-color: rgba(255, 255, 255, 0.8); }
+    mw-subscribe md-input-container:not(.md-input-invalid).md-input-focused md-icon {
+      color: white; }
+    mw-subscribe md-input-container.md-input-invalid .md-input {
+      border-color: red;
+      border-color: rgba(255, 0, 0, 0.5); }
+    mw-subscribe md-input-container.md-input-invalid.md-input-focused label {
+      color: white; }
+  mw-subscribe .md-button {
+    display: inline-block; }
+    mw-subscribe .md-button.md-primary.md-fab:not([disabled]) {
+      background-color: gray; }
+      mw-subscribe .md-button.md-primary.md-fab:not([disabled]):hover {
+        background-color: #969696; }
+    mw-subscribe .md-button.md-fab[disabled] {
+      background-color: gray;
+      background-color: rgba(100, 100, 100, 0.5); }

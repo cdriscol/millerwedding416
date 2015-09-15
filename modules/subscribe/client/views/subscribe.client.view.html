@@ -1,0 +1,10 @@
+<div layout="column" layout-align="center center">
+  <form ng-submit="vm.subscribe()" ng-hide="vm.subscribed" class="show-hide">
+      <md-input-container md-no-float>
+      <md-icon md-svg-src="modules/subscribe/client/img/ic_email_24px.svg"></md-icon>
+      <input ng-model="vm.email" type="email" placeholder="subscribe for updates">
+    </md-input-container>
+    <md-button ng-disabled="!vm.isValid()" class="md-fab md-mini md-primary" aria-label="Subscribe">+</md-button>
+  </form>
+</div>
+<div ng-show="vm.thankyou" class="ng-hide show-hide md-headline dancing">Thanks, we'll keep you updated!</div>
