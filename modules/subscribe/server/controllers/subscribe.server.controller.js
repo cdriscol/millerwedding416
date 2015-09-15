@@ -2,6 +2,8 @@
 
 var GoogleSpreadsheet = require("google-spreadsheet"),
 config = require('../../../../config/config'),
+SubscribeMailer = require('./mail/subscribe.server.mailer'),
+mailer = new SubscribeMailer(),
 _ = require('lodash');
 
 exports.addSubscription = function(req, res) {
@@ -25,6 +27,7 @@ exports.addSubscription = function(req, res) {
               console.log(err);
               res.status(500).send('error adding subscription');
             } else {
+              mailer.sendNewSubscription(email);
               res.send('subscription added');
             }
           });          
