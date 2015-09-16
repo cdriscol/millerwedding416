@@ -1,5 +1,7 @@
 'use strict';
 
+var creds = require('../../../config.json');
+
 module.exports = {
   app: {
     title: 'Miller Wedding 2016 | Michelle Place and Nate Miller',
@@ -30,10 +32,7 @@ module.exports = {
   logo: 'modules/core/client/img/brand/logo.png',
   favicon: 'modules/core/client/img/brand/favicon.ico',
   google_drive: {
-    creds: {
-      client_email: process.env.MW_GMAIL,
-      private_key: process.env.MW_GMAIL_KEY
-    },
+    creds: creds,
     subscribe_id: process.env.MW_GMAIL_SUBSCRIBE
   },
   mandrill: {
