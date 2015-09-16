@@ -35,7 +35,9 @@
   right: -100%; }
 
 mw-subscribe {
-  min-height: 100px; }
+  min-height: 100px;
+  /* Extra Small Devices, Phones */
+  /* Custom, iPhone Retina */ }
   mw-subscribe md-input-container md-icon {
     color: white;
     color: rgba(255, 255, 255, 0.5); }
@@ -84,3 +86,11 @@ mw-subscribe {
   mw-subscribe .initialmessage {
     font-size: 1.75rem;
     font-size: 28px; }
+  @media only screen and (max-width: 480px) {
+    mw-subscribe .initialmessage {
+      font-size: 1.5rem;
+      font-size: 20px; } }
+  @media only screen and (max-width: 320px) {
+    mw-subscribe .initialmessage {
+      font-size: 1rem;
+      font-size: 16px; } }
