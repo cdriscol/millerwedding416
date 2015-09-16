@@ -5,20 +5,51 @@
   :-ms-input-placeholder      {@content}  
 }
 
+.show-hide {
+    -webkit-transition:all linear 1.5s  !important;
+    transition:all linear 1.5s !important;
+}
+.show-hide.ng-hide {
+    opacity: 0;
+}
+.show-hide.ng-show {
+    opacity: 1;
+}
+
+.animate-hide,
+.animate-hide-right {
+ -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+    -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+    -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+  line-height:38px;
+  opacity:1;
+  // position: absolute;
+  // left: 50%;
+  // width:20%;
+  
+  display:block;
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  
+  &.ng-hide {
+    left: -100%;
+    opacity:0;
+    margin-left:0px;
+  }
+}
+
+.animate-hide-right.ng-hide {
+  left:0;
+  right:-100%;
+}
+
 mw-subscribe {
-  min-height:80px;
-  .show-hide {
-      -webkit-transition:all linear 1.5s  !important;
-      transition:all linear 1.5s !important;
-  }
-  .show-hide.ng-hide {
-      opacity: 0;
-  }
-  .show-hide.ng-show {
-      opacity: 1;
-  }
+  min-height:100px;
   md-input-container {
-    display:inline-block;
     md-icon {
       color:white;
       color: rgba(255, 255, 255, 0.5);
@@ -28,6 +59,7 @@ mw-subscribe {
       border-color: rgba(255, 255, 255, 0.5);
       color:white;
       text-align: center;
+      width:250px;
     }
     
     label {
@@ -66,7 +98,12 @@ mw-subscribe {
    }
   }
   .md-button {
-    display:inline-block;
+    text-transform: none;
+    display:block!important;
+    margin:0 auto;
+    &.ng-hide{
+      display:block!important;
+    }
     &.md-primary.md-fab:not([disabled]) {
       background-color:gray;
       &:hover {
@@ -77,5 +114,20 @@ mw-subscribe {
       background-color:gray;
       background-color:rgba(100,100,100,0.5);
     }
+  }
+  
+  div.animated-wrapper {
+    position:relative;
+    min-width:600px;
+    height:40px;
+  }
+  
+  .thankyou {
+    margin-top: 40px;
+  }
+  
+  .initialmessage{
+    font-size:1.75rem;
+    font-size:28px;
   }
 }

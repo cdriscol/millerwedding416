@@ -5,7 +5,12 @@ angular.module('core')
 
 function mwSubscribe() {
   var directive = {
-    scope: {},
+    scope: {
+      mwThankYou: '@',
+      mwPlaceholder: '@',
+      mwInitialMessage: '@',
+      mwEmailButtonMessage: '@',
+    },
     templateUrl: 'modules/subscribe/client/views/subscribe.client.view.html',
     restrict: 'E',
     controller: SubscribeController,
