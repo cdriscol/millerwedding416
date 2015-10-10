@@ -1,7 +1,5 @@
 'use strict';
 
-var creds = require('../../../config.json');
-
 module.exports = {
   app: {
     title: 'Miller Wedding 2016 | Michelle Place and Nate Miller',
