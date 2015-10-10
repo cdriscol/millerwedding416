@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('core')
+angular.module('subscribe')
   .controller('SubscribeController', SubscribeController);
   
 SubscribeController.$inject = ['$scope', '$http', '$timeout'];
