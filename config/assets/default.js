@@ -7,6 +7,7 @@ module.exports = {
         'public/lib/angular-material/angular-material.css',
       ],
       js: [
+        'public/lib/gsap/src/minified/TweenMax.min.js',
         'public/lib/angular/angular.js',
         'public/lib/angular-resource/angular-resource.js',
         'public/lib/angular-animate/angular-animate.js',
@@ -30,6 +31,8 @@ module.exports = {
     js: [
       'modules/core/client/app/config.js',
       'modules/core/client/app/init.js',
+      'modules/subscribe/client/subscribe.client.module.js',
+      'modules/animations/client/animations.client.module.js',
       'modules/*/client/*.js',
       'modules/*/client/**/*.js'
     ],

@@ -16,7 +16,9 @@
     "angular": true,
     "io": true,
     "ApplicationConfiguration": true,
-    "SubscribeController": true
+    "SubscribeController": true,
+    "TweenMax": true,
+    "Sine": true
   },
   "predef": [ // Extra globals.
     "inject",

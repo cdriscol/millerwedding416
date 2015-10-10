@@ -37,6 +37,7 @@
     "forever": "~0.14.2",
     "glob": "^5.0.13",
     "google-spreadsheet": "^1.0.1",
+    "gsap": "^1.18.0",
     "gulp": "^3.9.0",
     "gulp-angular-templatecache": "^1.7.0",
     "gulp-autoprefixer": "^2.3.1",
