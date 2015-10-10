@@ -15,7 +15,9 @@ module.exports = {
         'public/lib/angular-messages/angular-messages.js',
         'public/lib/angular-ui-router/release/angular-ui-router.js',
         'public/lib/angular-ui-utils/ui-utils.js',
-        'public/lib/angular-material/angular-material.js'
+        'public/lib/angular-material/angular-material.js',
+        'public/lib/angulartics/dist/angulartics.min.js',
+        'public/lib/angulartics-google-analytics/dist/angulartics-google-analytics.min.js'
       ],
       tests: ['public/lib/angular-mocks/angular-mocks.js']
     },

@@ -15,7 +15,9 @@ module.exports = {
         'public/lib/angular-messages/angular-messages.min.js',
         'public/lib/angular-ui-router/release/angular-ui-router.min.js',
         'public/lib/angular-ui-utils/ui-utils.min.js',
-        'public/lib/angular-material/angular-material.min.js'
+        'public/lib/angular-material/angular-material.min.js',
+        'public/lib/angulartics/dist/angulartics.min.js',
+        'public/lib/angulartics-google-analytics/dist/angulartics-google-analytics.min.js'
       ]
     },
     css: 'public/dist/application.min.css',
