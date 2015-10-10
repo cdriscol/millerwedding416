@@ -10,6 +10,7 @@
     "angular-mocks": "~1.4.5",
     "angular-resource": "~1.4.5",
     "angular-ui-router": "~0.2.15",
-    "angular-ui-utils": "~3.0.0"
+    "angular-ui-utils": "~3.0.0",
+    "gsap": "~1.18.0"
   }
 }
