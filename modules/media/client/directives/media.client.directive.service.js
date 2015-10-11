@@ -13,8 +13,7 @@
     };
     return service;
     
-    function getRecentImages(tag) {
-      var clientId = '94442b697f814951a879e5bdbcc5a346';
+    function getRecentImages(tag, clientId) {
       var endpoint = 'https://api.instagram.com/v1/tags/';
       endpoint += tag;
       endpoint += '/media/recent?client_id=';

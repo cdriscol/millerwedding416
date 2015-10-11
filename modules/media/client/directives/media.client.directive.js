@@ -9,6 +9,8 @@
       scope: {
         mwTag: '@',
         mwSpeed: '=',
+        mwRefresh: '=',
+        mwClientId: '@'
       },
       templateUrl: 'modules/media/client/directives/media.client.template.html',
       restrict: 'E',

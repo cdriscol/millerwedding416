@@ -8,24 +8,28 @@
   MediaDirectiveController.$inject = ['$scope', '$interval', 'MediaDirectiveService'];
 
   function MediaDirectiveController($scope, $interval, MediaDirectiveService) {
+    var _allImages = [],
+        _speed = $scope.mwSpeed || 4,
+        _refresh = $scope.mwRefresh || 20,
+        _lastId, 
+        _reset = false;
+    
     var vm = this;
     vm.tag = $scope.mwTag;
-    vm.speed = $scope.mwSpeed || 4;
     vm.recentImages = [];
     vm.currentIndex = 0;
-    vm.lastId = undefined;
-    vm.getCurrentImage = getCurrentImage;
     
     getRecentImages();
     
-    $interval(getRecentImages, 20000);
-    $interval(gotoNextImage, vm.speed * 1000);
-    
+    $interval(getRecentImages, _refresh * 1000);
+    $interval(gotoNextImage, _speed * 1000);
+        
     function getRecentImages() {
       MediaDirectiveService
-        .getRecentImages(vm.tag)
+        .getRecentImages(vm.tag, $scope.mwClientId)
+        .then(setAllImages)
         .then(setRecentImages)
-        .then(setCurrentIndex)
+        .then(setResetFlag)
         .then(setNoImages);
     }
     
@@ -34,31 +38,35 @@
     }
     
     function gotoNextImage() {
-      if(vm.currentIndex === vm.recentImages.length-1 || vm.reset) {
+      if(vm.currentIndex === vm.recentImages.length-1 || _reset) {
         vm.currentIndex = 0;
-        vm.reset = false;
+        if(_reset) {
+          _reset = false;
+          vm.recentImages = _allImages;
+        }        
       } else {
         vm.currentIndex++;
       }
     }
     
-    function setCurrentIndex(images) {
-      if(images.length && images[0].id !== vm.lastId) {
-        vm.reset = true;
-        vm.lastId = images[0].id;
+    function setResetFlag(images) {
+      if(images.length && images[0].id !== _lastId) {
+        _reset = true;
+        _lastId = images[0].id;
       }
       return images;
     }
     
-    function setRecentImages(data) {
-      if(!vm.recentImages.length || vm.recentImages[0].id !== vm.lastId) {
-        vm.recentImages = data.data;
-      }
-      return vm.recentImages;
+    function setAllImages(data) {
+      _allImages = data.data;
+      return _allImages;
     }
     
-    function getCurrentImage() {
-      return vm.recentImages[vm.currentIndex];
+    function setRecentImages(images) {
+      if(!vm.recentImages.length) {
+        vm.recentImages = images;
+      }
+      return images;
     }
   }
 })();

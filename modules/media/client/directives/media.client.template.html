@@ -4,7 +4,7 @@
   src="{{image.images.low_resolution.url}}" 
   srcset="{{image.images.standard_resolution.url}} 800w"
   class="ig-image"
-  ng-show="$index == vm.currentIndex" />
+  ng-if="$index == vm.currentIndex" />
 <div ng-show="vm.noImages" class="no-images dancing">
-  There are no images for {{vm.tag}}
+  There are no images for tag #{{vm.tag}}
 </div>
