@@ -9,6 +9,15 @@
   border-radius: 20px;
   box-shadow: 0 0 50px white;
 }
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 800px) {
+  .ig-image {
+    width: 320px;
+    height: 320px;
+    margin-top: -160px; /* Half the height */
+    margin-left: -160px; /* Half the width */
+  }
+}
 .media {
   height:100vh;
   overflow:hidden;
