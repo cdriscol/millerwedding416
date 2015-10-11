@@ -1,0 +1,31 @@
+.ig-image {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  width: 640px;
+  height: 640px;
+  margin-top: -320px; /* Half the height */
+  margin-left: -320px; /* Half the width */
+  border-radius: 20px;
+  box-shadow: 0px 0px 50px white;
+}
+.media {
+  height:100vh;
+  overflow:hidden;
+  background-image: url('/modules/core/client/img/natemichelle.jpg');
+  background-size:cover;
+  background-position: center;
+}
+.no-images {
+  color:white;
+  font-size:2rem;
+  font-size:32px;
+  @extend .dancing;
+  text-align: center;
+  position:absolute;
+  top: 50%;
+  width:100%;
+}
+.overflow-hidden {
+  overflow: hidden;
+}

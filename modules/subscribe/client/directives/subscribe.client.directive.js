@@ -13,7 +13,7 @@ function mwSubscribe() {
     },
     templateUrl: 'modules/subscribe/client/views/subscribe.client.view.html',
     restrict: 'E',
-    controller: SubscribeController,
+    controller: 'SubscribeController',
     controllerAs: 'vm'
   };
   

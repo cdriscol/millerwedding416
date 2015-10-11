@@ -18,7 +18,9 @@
     "ApplicationConfiguration": true,
     "SubscribeController": true,
     "TweenMax": true,
-    "Sine": true
+    "Sine": true,
+    "Bounce": true,
+    "Power1": true
   },
   "predef": [ // Extra globals.
     "inject",

@@ -1,0 +1,9 @@
+<img 
+  ng-model="vm.currentIndex"
+  ng-repeat="image in vm.recentImages" 
+  src="{{image.images.standard_resolution.url}}" 
+  class="ig-image"
+  ng-show="$index == vm.currentIndex" />
+<div ng-show="vm.noImages" class="no-images dancing">
+  There are no images for {{vm.tag}}
+</div>
