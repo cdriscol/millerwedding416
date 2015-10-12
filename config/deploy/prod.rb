@@ -81,9 +81,17 @@ namespace :deploy do
       execute "cd #{deploy_to}/current && pm2 start server.js --name \"millerwedding416\""
     end
   end
+  
+  task :copy_config do
+    on roles(:app) do
+      puts "executing: cp config.json releases/."
+      execute "cd #{deploy_to} && cp config.json releases/."
+    end
+  end
 end
 
 after "deploy:updated", "deploy:precompile_assets"
+before "deploy:start_app", "deploy:copy_config"
 after "deploy:published" , "deploy:start_app"
 after "deploy:start_app", "deploy:restart"
 after "deploy:restart", "deploy:cleanup" # leave the last 5 releases only
