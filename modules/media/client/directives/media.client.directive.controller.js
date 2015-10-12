@@ -15,8 +15,8 @@
         _lastId, 
         _reset = false;
     
-    vm.tag = vm.mwTag,
-    vm.recentImages = [],
+    vm.tag = vm.mwTag;
+    vm.recentImages = [];
     vm.currentIndex = 0;
     
     getRecentImages();
