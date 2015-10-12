@@ -5,18 +5,18 @@
     .module('media')
     .controller('MediaDirectiveController', MediaDirectiveController);
     
-  MediaDirectiveController.$inject = ['$scope', '$interval', 'MediaDirectiveService'];
+  MediaDirectiveController.$inject = ['$interval', 'MediaDirectiveService'];
 
-  function MediaDirectiveController($scope, $interval, MediaDirectiveService) {
-    var _allImages = [],
-        _speed = $scope.mwSpeed || 4,
-        _refresh = $scope.mwRefresh || 20,
+  function MediaDirectiveController($interval, MediaDirectiveService) {
+    var vm = this,
+        _allImages = [],
+        _speed = vm.mwSpeed || 4,
+        _refresh = vm.mwRefresh || 20,
         _lastId, 
         _reset = false;
     
-    var vm = this;
-    vm.tag = $scope.mwTag;
-    vm.recentImages = [];
+    vm.tag = vm.mwTag,
+    vm.recentImages = [],
     vm.currentIndex = 0;
     
     getRecentImages();
@@ -26,7 +26,7 @@
         
     function getRecentImages() {
       MediaDirectiveService
-        .getRecentImages(vm.tag, $scope.mwClientId)
+        .getRecentImages(vm.tag, vm.mwClientId)
         .then(setAllImages)
         .then(setRecentImages)
         .then(setResetFlag)

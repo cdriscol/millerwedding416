@@ -15,7 +15,8 @@
       templateUrl: 'modules/media/client/directives/media.client.template.html',
       restrict: 'E',
       controller: 'MediaDirectiveController',
-      controllerAs: 'vm'
+      controllerAs: 'vm',
+      bindToController: true
     };
     
     return directive;
