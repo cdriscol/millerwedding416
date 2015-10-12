@@ -1,10 +1,11 @@
-(function(TweenMax) {
+(function() {
   'use strict';
   
-  angular.module('animations')
+  angular
+    .module('animations')
     .animation('.hide-right', AnimateHideRight);
-    
-  function AnimateHideRight() {
+  
+  function AnimateHideRight(TweenMax) {
     var animation = {
       addClass: addClass,
       removeClass: removeClass
@@ -32,4 +33,4 @@
       }
     }
   }
-})(TweenMax);
+})();

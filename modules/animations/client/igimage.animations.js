@@ -1,10 +1,11 @@
-(function(TweenMax) {
+(function() {
   'use strict';
   
-  angular.module('animations')
+  angular
+    .module('animations')
     .animation('.ig-image', IgImageAnimation);
     
-  function IgImageAnimation($window) {
+  function IgImageAnimation($window, TweenMax) {
     var animation = {
       enter: enter,
       leave: leave
@@ -56,4 +57,4 @@
         });
     }
   }
-})(TweenMax);
+})();

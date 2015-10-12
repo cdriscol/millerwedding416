@@ -1,10 +1,11 @@
-(function(TweenMax) {
+(function() {
   'use strict';
   
-  angular.module('animations')
+  angular
+    .module('animations')
     .directive('fadeIn', FadeInDirective);
     
-  function FadeInDirective() {
+  function FadeInDirective(TweenMax) {
     var directive = {
       restrict: 'C',
       link: link
@@ -20,4 +21,4 @@
     
     return directive;
   }
-})(TweenMax);
+})();

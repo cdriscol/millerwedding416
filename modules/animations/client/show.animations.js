@@ -1,10 +1,11 @@
-(function(TweenMax) {
+(function() {
   'use strict';
   
-  angular.module('animations')
+  angular
+    .module('animations')
     .animation('.show-hide', ShowHideAnimation);
     
-  function ShowHideAnimation() {
+  function ShowHideAnimation(TweenMax) {
     var animation = {
       addClass: addClass,
       removeClass: removeClass
@@ -34,4 +35,4 @@
       }
     }
   }
-})(TweenMax);
+})();
