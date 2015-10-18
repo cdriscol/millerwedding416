@@ -2,16 +2,16 @@
   <form ng-submit="vm.subscribe()" ng-hide="vm.subscribed" class="show-hide">
     <md-input-container md-no-float>
       <!-- <md-icon md-svg-src="modules/subscribe/client/img/ic_email_24px.svg"></md-icon> -->
-      <input ng-model="vm.email" type="email" placeholder="{{::mwPlaceholder}}">
+      <input ng-model="vm.email" type="email" placeholder="{{mwPlaceholder}}">
     </md-input-container>
   </form>
     <div class="show-hide animated-wrapper" ng-hide="vm.subscribed">
-      <p ng-hide="vm.isValid()" class="hide-right dancing" aria-label="Subscribe"><span class="initialmessage">{{::mwInitialMessage}}</span></p>
+      <p ng-hide="vm.isValid()" class="hide-right dancing" aria-label="Subscribe"><span class="initialmessage">{{mwInitialMessage}}</span></p>
       <div class="animate-hide ng-hide" ng-hide="!vm.isValid()">
-        <md-button ng-click="vm.subscribe()" class="dancing" aria-label="Subscribe"><span class="initialmessage">{{::mwEmailButtonMessage}}</span></md-button>
+        <md-button ng-click="vm.subscribe()" class="dancing" aria-label="Subscribe"><span class="initialmessage">{{mwEmailButtonMessage}}</span></md-button>
       </div>
     </div>
     <div class="animated-wrapper">
-      <div ng-show="vm.thankyou" class="ng-hide animate-hide md-display-1 dancing initialmessage">{{::mwThankYou}}</div>
+      <div ng-show="vm.thankyou" class="ng-hide animate-hide md-display-1 dancing initialmessage">{{mwThankYou}}</div>
     </div>
 </div>

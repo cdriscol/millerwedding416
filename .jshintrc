@@ -20,7 +20,9 @@
     "TweenMax": true,
     "Sine": true,
     "Bounce": true,
-    "Power1": true
+    "Power1": true,
+    "jQuery": true,
+    "classie": true
   },
   "predef": [ // Extra globals.
     "inject",

@@ -4,20 +4,33 @@ module.exports = {
   client: {
     lib: {
       css: [
-        'public/lib/angular-material/angular-material.css',
+        'public/lib/normalize-css/normalize.css',
+				'public/lib/font-awesome/css/font-awesome.min.css',
+        'public/lib/bootstrap/dist/css/bootstrap.css',
+        'public/lib/bootstrap/dist/css/bootstrap.theme.css',
       ],
       js: [
+        'public/lib/jquery/dist/jquery.js',
         'public/lib/gsap/src/minified/TweenMax.min.js',
-        'public/lib/angular/angular.js',
-        'public/lib/angular-resource/angular-resource.js',
-        'public/lib/angular-animate/angular-animate.js',
-        'public/lib/angular-aria/angular-aria.js',
-        'public/lib/angular-messages/angular-messages.js',
-        'public/lib/angular-ui-router/release/angular-ui-router.js',
-        'public/lib/angular-ui-utils/ui-utils.js',
-        'public/lib/angular-material/angular-material.js',
-        'public/lib/angulartics/dist/angulartics.min.js',
-        'public/lib/angulartics-google-analytics/dist/angulartics-google-analytics.min.js'
+				'public/lib/angular/angular.js',
+				'public/lib/angular-resource/angular-resource.js',
+				'public/lib/angular-animate/angular-animate.js',
+				'public/lib/angular-ui-router/release/angular-ui-router.js',
+				'public/lib/angulartics/src/angulartics.js',
+				'public/lib/angulartics/src/angulartics-ga.js',
+				'public/lib/angular-ui-utils/ui-utils.js',
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+				'public/lib/bootstrap/dist/js/bootstrap.js',
+				'public/lib/modernizr/modernizr.js',
+        'public/lib/jquery.easing/js/jquery.easing.min.js',
+        'public/lib/classie/classie.js',
+        'public/lib/jqBootstrapValidation/dist/jqBootstrapValidation-1.3.7.min.js',
+				// 'public/modules/animations/client/scrollspy.js',
+				'public/modules/animations/client/animated.header.js',
+				'public/lib/angular-scroll/angular-scroll.min.js',
+				'public/lib/typed.js/dist/typed.min.js',
+				'public/lib/waypoints/lib/jquery.waypoints.js',
+				'public/lib/angulartics/src/angulartics-scroll.js'
       ],
       tests: ['public/lib/angular-mocks/angular-mocks.js']
     },
@@ -36,7 +49,8 @@ module.exports = {
       'modules/subscribe/client/subscribe.client.module.js',
       'modules/animations/client/animations.client.module.js',
       'modules/*/client/*.js',
-      'modules/*/client/**/*.js'
+      'modules/*/client/**/*.js',
+      'public/modules/animations/client/scrollspy.js',
     ],
     views: ['modules/*/client/views/**/*.html'],
     templates: ['build/templates.js']
