@@ -1,14 +1,24 @@
 header {
-  background-image: url(../img/header-bg.jpg);
-  background-repeat: none;
-  background-attachment: scroll;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
   text-align: center;
   min-height:300px;
   padding-top:300px;
   padding-bottom:200px;
+}
+
+.header-center {
+  position: absolute;
+  left: 50%;
+  width: 200px;
+  height:60px;
+  margin-left: -100px;
+  background:white;
+  border-radius: 50%;
+  a {
+    width:100%;
+    text-align: center;
+    font-size: 2.5rem;
+    .date {
+      font-size:1.5rem;
+    }
+  }
 }

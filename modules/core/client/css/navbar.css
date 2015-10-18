@@ -1,0 +1,10 @@
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: white; }
+
+.navbar {
+  background-color: white; }
+  .navbar .navbar-nav > .active > a {
+    background-color: white;
+    border-bottom: 1px solid; }
+    .navbar .navbar-nav > .active > a:focus {
+      background-color: white; }

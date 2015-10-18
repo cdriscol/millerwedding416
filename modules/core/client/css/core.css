@@ -2,7 +2,10 @@
   font-family: 'Dancing Script', cursive; }
 
 body {
-  margin-top: 50px; }
+  margin-top: 50px;
+  background: url(../img/natemichelle.jpg) no-repeat center center fixed;
+  background-size: cover;
+  -o-background-size: cover; }
 
 .home-section {
   min-height: 500px; }
