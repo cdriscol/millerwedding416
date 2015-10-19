@@ -1,4 +1,5 @@
 .subscribe-wrapper {
+  padding-top:50px;
   min-height: 180px;
 }
 .animate-hide,
@@ -11,8 +12,17 @@
   top:0;
   margin:auto;
 }
-
+.btn-transparent {
+  &:hover {
+    border:1px solid rgba(255, 255, 255, 0.85);
+    background:rgba(255, 255, 255, 0.15);
+    color:white;
+  }
+}
 mw-subscribe {
+  form {
+    margin-bottom:20px;
+  }
   min-height:100px;
   md-input-container {
     md-icon {
@@ -25,6 +35,21 @@ mw-subscribe {
       color:white;
       text-align: center;
       width:250px;
+    }
+    
+    input {
+      background:none;
+      border:none;
+      border-bottom:1px solid;
+      text-align: center;
+      &:focus {
+        // border:none;
+        outline: none;
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow: none !important;
+        -webkit-appearance:none;
+      }
     }
     
     label {
@@ -101,6 +126,9 @@ mw-subscribe {
       font-size:1.5rem;
       font-size:20px;
     }
+    div.animated-wrapper {
+      min-width:200px;
+    }
   }
 
   /* Custom, iPhone Retina */ 
@@ -108,6 +136,9 @@ mw-subscribe {
     .initialmessage{
       font-size:1rem;
       font-size:16px;
+    }
+    div.animated-wrapper {
+      min-width:200px;
     }
   }
 }

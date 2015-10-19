@@ -1,5 +1,19 @@
-<header>
-  <div class="container">
-    <p class="dancing header-main">Hi, and welcome to our website!</p>
+<header class="home-section">
+  <div class="container images" ng-controller="HeaderImageController">
+    <img class="img-responsive image-fade" ng-show="currentImage === 1" src="/modules/core/client/img/header-bg1.jpg" alt="Nate and Michelle">
+    <img class="img-responsive image-fade" ng-show="currentImage === 2" src="/modules/core/client/img/header-bg2.jpg" alt="Nate and Michelle">
+    <img class="img-responsive image-fade" ng-show="currentImage === 3" src="/modules/core/client/img/header-bg3.jpg" alt="Nate and Michelle">
+  </div>
+  <div class="subscribe-container container">
+  <div layout-padding class="home" layout="column" layout-align="center center">
+      <mw-subscribe 
+        mw-thank-you="Thanks, we'll be sure to keep you updated!" 
+        mw-initial-message="Enter your email to receive updates from us!"
+        mw-email-button-message="Sign me up!"
+        mw-placeholder="youremail@gmail.com" 
+        class="show-hide"></mw-subscribe>
+    </div>
   </div>
 </header>
+<section class="home-section subscribe" id="subscribe" analytics-on="scrollby" analytics-event="scroll - subscribe">
+</section>

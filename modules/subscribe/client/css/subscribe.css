@@ -1,4 +1,5 @@
 .subscribe-wrapper {
+  padding-top: 50px;
   min-height: 180px; }
 
 .animate-hide,
@@ -11,10 +12,17 @@
   top: 0;
   margin: auto; }
 
+.btn-transparent:hover {
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.15);
+  color: white; }
+
 mw-subscribe {
   min-height: 100px;
   /* Extra Small Devices, Phones */
   /* Custom, iPhone Retina */ }
+  mw-subscribe form {
+    margin-bottom: 20px; }
   mw-subscribe md-input-container md-icon {
     color: white;
     color: rgba(255, 255, 255, 0.5); }
@@ -24,6 +32,15 @@ mw-subscribe {
     color: white;
     text-align: center;
     width: 250px; }
+  mw-subscribe md-input-container input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid;
+    text-align: center; }
+    mw-subscribe md-input-container input:focus {
+      outline: none;
+      box-shadow: none !important;
+      -webkit-appearance: none; }
   mw-subscribe md-input-container label {
     color: white;
     text-align: center; }
@@ -66,8 +83,12 @@ mw-subscribe {
   @media only screen and (max-width: 480px) {
     mw-subscribe .initialmessage {
       font-size: 1.5rem;
-      font-size: 20px; } }
+      font-size: 20px; }
+    mw-subscribe div.animated-wrapper {
+      min-width: 200px; } }
   @media only screen and (max-width: 320px) {
     mw-subscribe .initialmessage {
       font-size: 1rem;
-      font-size: 16px; } }
+      font-size: 16px; }
+    mw-subscribe div.animated-wrapper {
+      min-width: 200px; } }

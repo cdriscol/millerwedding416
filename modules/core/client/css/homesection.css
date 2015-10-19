@@ -1,8 +1,53 @@
 .home-section {
-  padding: 100px 0; }
+  padding: 100px 0;
+  min-height: calc(100vh);
+  /* Extra Small Devices, Phones */
+  /* Custom, iPhone Retina */ }
   .home-section h2.section-heading {
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem; }
+  .home-section h3.section-subheading {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem; }
+    .home-section h3.section-subheading a {
+      color: white; }
+  .home-section h4.section-subheading {
     margin-top: 0;
     margin-bottom: 15px;
     color: white;
     font-family: 'Dancing Script', cursive;
-    font-size: 3.8rem; }
+    font-size: 2.8rem; }
+    .home-section h4.section-subheading a {
+      color: white; }
+  .home-section p.section-subheading {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem; }
+    .home-section p.section-subheading a {
+      color: white; }
+  @media only screen and (max-width: 480px) {
+    .home-section h2.section-heading {
+      font-size: 3rem; }
+    .home-section h3.section-subheading {
+      font-size: 2.5rem; }
+    .home-section h4.section-subheading {
+      font-size: 1.8rem; }
+    .home-section p.section-subheading {
+      font-size: 1.3rem; } }
+  @media only screen and (max-width: 320px) {
+    .home-section h2.section-heading {
+      font-size: 3rem; }
+    .home-section h3.section-subheading {
+      font-size: 2.5rem; }
+    .home-section h4.section-subheading {
+      font-size: 1.8rem; }
+    .home-section p.section-subheading {
+      font-size: 1.3rem; } }

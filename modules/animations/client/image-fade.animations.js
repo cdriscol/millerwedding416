@@ -3,9 +3,9 @@
   
   angular
     .module('animations')
-    .animation('.animate-hide', AnimateHide);
+    .animation('.image-fade', ImageFade);
     
-  function AnimateHide(TweenMax) {
+  function ImageFade(TweenMax) {
     var animation = {
       addClass: addClass,
       removeClass: removeClass
@@ -13,8 +13,12 @@
     return animation;
     
     function addClass(element, className, done) {
-      if(className === 'ng-hide' || className === 'active') {
-        TweenMax.to(element, 2, { 
+      if(className === 'ng-hide') {
+        TweenMax.fromTo(element, 1, 
+          {
+            opacity:1,
+          },
+          { 
           opacity:0, 
           ease: Sine.easeOut
         });
@@ -22,12 +26,15 @@
     }
     
     function removeClass(element, className, done) {
-      if(className === 'ng-hide' || className === 'active') {
+      if(className === 'ng-hide') {
         TweenMax.set(element, {opacity:0});
-        TweenMax.to(element, 2, { 
+        TweenMax.fromTo(element, 1, 
+        {
+          opacity:0
+        },
+        { 
           opacity:1, 
-          ease: Sine.easeIn,
-          delay:1
+          ease: Sine.easeIn
         });
       }
     }
