@@ -12,7 +12,7 @@
     };
     
     function link(scope, element, attrs) {
-      var weddingDay = [2016, 4, 16];
+      var weddingDay = [2016, 3, 16];
       var a = moment(weddingDay);
       var b = moment();
       var days = a.diff(b, 'days');
