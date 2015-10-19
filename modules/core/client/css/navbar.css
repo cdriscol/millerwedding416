@@ -7,3 +7,6 @@
     background-color: white; }
     .navbar .navbar-nav > .active > a:focus {
       background-color: white; }
+
+.navbar-toggle .icon-bar {
+  background-color: #337ab7; }
