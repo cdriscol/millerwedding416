@@ -8,7 +8,7 @@
     <div class="show-hide animated-wrapper" ng-hide="vm.subscribed">
       <p ng-hide="vm.isValid()" class="hide-right dancing" aria-label="Subscribe"><span class="initialmessage">{{mwInitialMessage}}</span></p>
       <div class="animate-hide ng-hide" ng-hide="!vm.isValid()">
-        <md-button ng-click="vm.subscribe()" class="dancing btn btn-transparent" aria-label="Subscribe"><span class="initialmessage">{{mwEmailButtonMessage}}</span></md-button>
+        <md-button ng-click="vm.subscribe()" ng-hide="!vm.isValid()" ng-disabled="!vm.isValid()" class="dancing btn btn-transparent" aria-label="Subscribe"><span class="initialmessage">{{mwEmailButtonMessage}}</span></md-button>
       </div>
     </div>
     <div class="animated-wrapper">
