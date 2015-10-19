@@ -29,7 +29,8 @@ module.exports = {
 				'public/lib/angular-scroll/angular-scroll.min.js',
 				'public/lib/typed.js/dist/typed.min.js',
 				'public/lib/waypoints/lib/jquery.waypoints.js',
-				'public/lib/angulartics/src/angulartics-scroll.js'
+				'public/lib/angulartics/src/angulartics-scroll.js',
+        'public/lib/moment/min/moment-with-locales.min.js',
       ]
     },
     css: 'public/dist/application.min.css',

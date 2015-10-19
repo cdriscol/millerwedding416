@@ -8,9 +8,8 @@
   HeaderImageController.$inject = ['$scope', '$interval'];
   
   function HeaderImageController($scope, $interval) {
-    console.log('header image controller');
     $scope.currentImage = 1;
-    $scope.imageCount = 3;
+    $scope.imageCount = 4;
     
     $interval(nextImage, 5000);
     

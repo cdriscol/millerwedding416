@@ -14,12 +14,18 @@
     
     function addClass(element, className, done) {
       if(className === 'ng-hide') {
-        TweenMax.fromTo(element, 1, 
+        TweenMax.fromTo(element, 1.2, 
           {
-            opacity:1,
+            css: {
+              opacity:1,
+              boxShadow: '0 0 25px #FFF',
+            }
           },
           { 
-          opacity:0, 
+            css: {
+            opacity:0, 
+            boxShadow: 'none',
+          },
           ease: Sine.easeOut
         });
       }
@@ -27,13 +33,18 @@
     
     function removeClass(element, className, done) {
       if(className === 'ng-hide') {
-        TweenMax.set(element, {opacity:0});
-        TweenMax.fromTo(element, 1, 
+        TweenMax.fromTo(element, 1.2, 
         {
-          opacity:0
+          css: {
+            opacity:0,
+            boxShadow: 'none',
+          }
         },
         { 
-          opacity:1, 
+          css: {
+            boxShadow: '0 0 25px #FFF',
+            opacity:1, 
+          },
           ease: Sine.easeIn
         });
       }

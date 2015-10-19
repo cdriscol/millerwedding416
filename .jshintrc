@@ -22,7 +22,8 @@
     "Bounce": true,
     "Power1": true,
     "jQuery": true,
-    "classie": true
+    "classie": true,
+    "moment": true
   },
   "predef": [ // Extra globals.
     "inject",
