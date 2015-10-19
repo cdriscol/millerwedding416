@@ -4,7 +4,6 @@
 .navbar {
   background-color: white; }
   .navbar .navbar-nav > .active > a {
-    background-color: white;
-    border-bottom: 1px solid; }
+    background-color: white; }
     .navbar .navbar-nav > .active > a:focus {
       background-color: white; }
