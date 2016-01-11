@@ -1,0 +1,47 @@
+mw-rsvp {
+    display:block;
+    margin-bottom:100px;
+    min-height:400px;
+
+    .text-danger {
+        color:red;
+    }
+
+    h3,
+    .thank-you {
+        color:white;
+    }
+
+    .form-group {
+        input, select, textarea {
+            background:none;
+            color:white;
+            border-color:white;
+            &::-webkit-input-placeholder {
+              color:white;
+            }
+            &:-ms-input-placeholder {
+                color:white;
+            }
+            &::-moz-placeholder{
+                color:white;
+            }
+            &:-moz-placeholder {
+                color:white;
+            }
+        }
+    }
+
+    .btn-rsvp {
+        color:white;
+        font-family: 'Dancing Script', cursive;
+        font-size:2rem;
+        background:none;
+        border: 1px solid white;
+        &:hover {
+            color:white;
+            border:1px solid #F0F0F0;
+        }
+    }
+
+}

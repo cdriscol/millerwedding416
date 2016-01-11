@@ -1,0 +1,30 @@
+mw-rsvp {
+  display: block;
+  margin-bottom: 100px;
+  min-height: 400px; }
+  mw-rsvp .text-danger {
+    color: red; }
+  mw-rsvp h3,
+  mw-rsvp .thank-you {
+    color: white; }
+  mw-rsvp .form-group input, mw-rsvp .form-group select, mw-rsvp .form-group textarea {
+    background: none;
+    color: white;
+    border-color: white; }
+    mw-rsvp .form-group input::-webkit-input-placeholder, mw-rsvp .form-group select::-webkit-input-placeholder, mw-rsvp .form-group textarea::-webkit-input-placeholder {
+      color: white; }
+    mw-rsvp .form-group input:-ms-input-placeholder, mw-rsvp .form-group select:-ms-input-placeholder, mw-rsvp .form-group textarea:-ms-input-placeholder {
+      color: white; }
+    mw-rsvp .form-group input::-moz-placeholder, mw-rsvp .form-group select::-moz-placeholder, mw-rsvp .form-group textarea::-moz-placeholder {
+      color: white; }
+    mw-rsvp .form-group input:-moz-placeholder, mw-rsvp .form-group select:-moz-placeholder, mw-rsvp .form-group textarea:-moz-placeholder {
+      color: white; }
+  mw-rsvp .btn-rsvp {
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    background: none;
+    border: 1px solid white; }
+    mw-rsvp .btn-rsvp:hover {
+      color: white;
+      border: 1px solid #F0F0F0; }
