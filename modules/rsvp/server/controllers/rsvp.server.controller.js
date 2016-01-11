@@ -15,8 +15,11 @@ exports.getOneInvites = function(req, res) {
         } else {
             sheet.getRows(1, function(err, row_data){
                 console.log(err);
-                console.log(row_data);
-                res.json(row_data);
+                if(!err) {
+                    res.json(row_data);
+                } else {
+                    res.json([]);
+                }
             });
         }
     });
@@ -24,7 +27,6 @@ exports.getOneInvites = function(req, res) {
 
 exports.submit = function(req, res) {
   var rsvp = req.body;
-  console.log(rsvp);
 
     var sheet = new GoogleSpreadsheet(config.google_drive.rsvp_id);
     sheet.useServiceAccountAuth(config.google_drive.creds, function(err1) {
