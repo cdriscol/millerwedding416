@@ -1,11 +1,15 @@
 <header class="home-section">
-  <mw-rsvp></mw-rsvp>
-  <h4 class="section-subheading" mw-countdown></h4>
-  <div class="container images" ng-controller="HeaderImageController">
-    <img class="img-responsive image-fade" ng-show="currentImage === 1" src="/modules/core/client/img/header-bg1.jpg" alt="Nate and Michelle">
-    <img class="img-responsive image-fade" ng-show="currentImage === 2" src="/modules/core/client/img/header-bg2.jpg" alt="Nate and Michelle">
-    <img class="img-responsive image-fade" ng-show="currentImage === 3" src="/modules/core/client/img/header-bg3.jpg" alt="Nate and Michelle">
-    <img class="img-responsive image-fade" ng-show="currentImage === 4" src="/modules/core/client/img/header-bg4.jpg" alt="Nate and Michelle">
+  <div class="container">
+  <mw-rsvp class="col-md-offset-1 col-md-4"></mw-rsvp>
+  <div class="col-md-6">
+    <h4 class="section-subheading" mw-countdown></h4>
+    <div class="container images" ng-controller="HeaderImageController">
+      <img class="img-responsive image-fade" ng-show="currentImage === 1" src="/modules/core/client/img/header-bg1.jpg" alt="Nate and Michelle">
+      <img class="img-responsive image-fade" ng-show="currentImage === 2" src="/modules/core/client/img/header-bg2.jpg" alt="Nate and Michelle">
+      <img class="img-responsive image-fade" ng-show="currentImage === 3" src="/modules/core/client/img/header-bg3.jpg" alt="Nate and Michelle">
+      <img class="img-responsive image-fade" ng-show="currentImage === 4" src="/modules/core/client/img/header-bg4.jpg" alt="Nate and Michelle">
+    </div>
+  </div>
   </div>
   <!-- <div class="subscribe-container container">
     <div layout-padding class="home" layout="column" layout-align="center center">
