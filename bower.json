@@ -3,14 +3,13 @@
   "version": "0.0.1",
   "description": "Fullstack JavaScript with MongoDB, Express, AngularJS, and Node.js.",
   "dependencies": {
-    "bootstrap": "~3",
-    "angular": "~1.4.5",
-    "angular-resource": "~1.4.5",
-    "angular-animate": "~1.4.5",
-    "angular-mocks": "~1.4.5",
-    "angular-bootstrap": "~0.11.0",
+    "bootstrap": "=3.3.6",
+    "angular": "=1.4.8",
+    "angular-resource": "=1.4.8",
+    "angular-animate": "=1.4.8",
+    "angular-bootstrap": "=0.11.2",
     "angular-ui-utils": "~3.0.0",
-    "angular-ui-router": "~0.2.15",
+    "angular-ui-router": "=0.2.15",
     "lodash": "~2.4.1",
     "ng-clip": "~0.2.2",
     "moment": "~2.8.2",
@@ -23,10 +22,8 @@
     "typed.js": "*",
     "font-awesome": "~4.2.0",
     "gsap": "~1.18.0",
-    "angular-scroll": "~0.7.3",
-    "angular-spinner": "~0.7.0",
-    "angular-material": "~0.11.4",
-    "angulartics-google-analytics": "~0.1.4",
-    "angulartics": "~1.0.2"
+    "angular-scroll": "0.7.3",
+    "angulartics-google-analytics": "0.1.4",
+    "angulartics": "1.0.2"
   }
 }
