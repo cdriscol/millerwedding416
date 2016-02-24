@@ -5,14 +5,14 @@
   background: white;
   box-shadow: 0 0 10px white;
   border-radius: 20px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 20px;
   padding: 10px;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center; }
   .registry a.logo.cb {
     background-size: 80%;
-    background-image: url("http://static1.squarespace.com/static/54ac9ab6e4b063f7ed6cbca3/5519a181e4b0913c6cd48d2e/55d2204ae4b0bdc8a94083c4/1439834369742/crate-and-barrel-registry.png"); }
+    background-image: url("http://april232016.com/upload/image/crate-barrel.jpg"); }
   .registry a.logo.target {
     background-size: 50%;
     background-image: url("https://s-media-cache-ak0.pinimg.com/736x/be/67/5f/be675f196093fb4f052cb19e532a49a3.jpg"); }
@@ -22,5 +22,33 @@
   .registry a.logo:hover {
     box-shadow: 0 0 20px white; }
 
-.registry .registry-name {
+.registry .registry-name,
+.registry .honey-fund {
   color: white; }
+
+.registry .honey-fund {
+  text-align: center;
+  font-size: 3rem; }
+  .registry .honey-fund a {
+    text-decoration: none;
+    position: relative;
+    color: white; }
+    .registry .honey-fund a:hover {
+      color: white; }
+      .registry .honey-fund a:hover:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1); }
+    .registry .honey-fund a:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s; }
