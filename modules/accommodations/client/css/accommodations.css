@@ -4,5 +4,9 @@
   max-height: 400px;
   margin: 20px auto 0 auto; }
 
-.accommodations .information > h4.mention {
-  margin-top: 15px; }
+.accommodations .information > .mention {
+  margin-top: 15px;
+  font-size: 2.4rem; }
+
+.accommodations .information.beaver-village {
+  margin-top: 28px; }
